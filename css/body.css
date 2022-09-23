@@ -1,0 +1,775 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(226, 224, 243);
+  font-family: sans-serif;
+  overflow-x: hidden;
+  display: block;
+}
+
+body .navbar {
+  background-color: rgb(43, 42, 42);
+  height: 10vh;
+  display: block;
+  position: fixed;
+  z-index: 2;
+}
+
+body .navbar .navbar-brand {
+  text-align: left;
+  font-weight: 900;
+  display: flex;
+  color: #fff;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.navbar .fas {
+  font-size: 27px;
+  font-weight: 900;
+  color: #fff;
+  width: 30px;
+  margin-right: 20px;
+  position: relative;
+}
+
+
+/* drop down menu----------------------------------------- start*/
+
+.row .menuActive {
+  display: none;
+}
+.row {
+  top: 10vh;
+  position: relative;
+  height: fit-content;
+}
+/* drop down column  start*/
+.row .col-md-2 {
+  background: linear-gradient(to bottom, #616161 0%, #7d9e9c 100%);
+  padding: 5px;
+  border-radius: 2px;
+  height: fit-content;
+  scroll-behavior: smooth;
+}
+
+.row .col-md-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.row .col-md-2::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.row .col-md-2::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.row h1 {
+  padding: 3px;
+  margin: 3px 15px;
+  font-size: 15px;
+  color: #fff;
+  width: 90%;
+  background-color: #4d4d4d;
+  border-radius: 1px;
+  text-transform: capitalize;
+}
+
+.row h3 {
+  margin: 5px 0;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: rgb(59, 59, 59);
+  text-transform: capitalize;
+}
+
+.row .col-md-2 ul {
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+}
+.row .col-md-2 ul li {
+  padding: 4px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.row .col-md-2 ul li:first-child {
+  margin-top: 0px;
+}
+.row .col-md-2 ul li:hover {
+  background-color: #7270ff;
+}
+
+.row .col-md-2 ul li a {
+  margin-top: 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  text-transform: capitalize;
+  text-decoration: none;
+  line-height: 10px;
+
+}
+
+.row .col-md-2 ul li a i {
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  font-size: 15px;
+}
+
+/* drop down menu--------------------------------------- end*/
+
+/* common add data form for all page ___________________________ START */
+.editForm {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+}
+.UploadFrom {
+  display: none; /*by default */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
+.FormShow {
+  display: block;
+}
+
+.formWrapper {
+  margin: 5vh auto;
+  position: relative;
+  padding: 8px;
+  width: 55%;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.UploadFrom .formWrapper {
+  margin: 13vh auto;
+  position: relative;
+  width: 55%;
+}
+
+
+.formWrapper::after {
+  clear: both;
+}
+
+.formWrapper h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  margin: 5px;
+  background-color: rgb(131, 130, 130);
+  color: #fff;
+  font-weight: 500;
+}
+
+ .formWrapper h1 span{
+  font-size: 28px;
+  color: red;
+  width: 30px;
+  height: auto;
+  background-color: rgb(255, 228, 215);
+  cursor: pointer;
+} 
+.formWrapper a.a{
+  font-size: 28px;
+  color: red;
+  width: 35px;
+  height: auto;
+  background-color: rgb(255, 228, 215);
+  cursor: pointer;
+  float: right;
+}
+.formWrapper form {
+  padding: 5px;
+}
+
+.formWrapper form .inputWrapper {
+  margin: 10px 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.formWrapper form .noVisible {
+  display: none;
+}
+.ediTformWrapper form img {
+  width: auto;
+  max-height: 200px;
+  margin: 5px 0px;
+  border: 1px solid #bfbfbf;
+  color: rgb(255, 245, 238);
+}
+
+.formWrapper form .inputWrapper .input {
+  padding: 5px;
+  box-shadow: 1px 1px 3px rgb(108, 107, 112);
+  border-radius: 1px;
+  margin: 10px, 0px;
+}
+
+.formWrapper form .inputWrapper .input i {
+  font-size: 12px;
+  color: #6562f3;
+  font-weight: bold;
+}
+.formWrapper form .inputWrapper .input label {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: rgb(51, 50, 50);
+  width: 100%;
+  padding: 3px;
+  font-size: 14px;
+}
+
+.formWrapper form .inputWrapper .input input {
+  padding: 3px 5px;
+  border-style: solid;
+  border-left-color: rgb(24, 123, 180);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  background: rgba(0, 0, 0, 0.116);
+  /* border-bottom: 1px solid rgb(155, 152, 152); */
+  width: 100%;
+  font-size: 14px;
+}
+
+.formWrapper form .inputWrapper .input #fileInput {
+  padding-left: 0px;
+  background: none;
+  border: none;
+}
+form .button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+form .button button {
+  border: none;
+  background: rgb(13, 129, 182);
+  padding: 5px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 2px;
+  color: #fff;
+  transition: background 0.5s;
+  text-align: right;
+}
+form button:hover {
+  background: rgb(0, 134, 0);
+}
+
+form .button a {
+  border: none;
+  background: rgb(29, 43, 228);
+  padding: 7px 14px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 2px;
+  color: #fff;
+  transition: background 0.5s;
+  text-align: right;
+}
+
+.formWrapper form .radioWrapper {
+  margin: 10px;
+}
+.formWrapper form .radioWrapper .input {
+  display: flex;
+  flex-direction: row;
+}
+.formWrapper form .radioWrapper .input input {
+  margin: 5px 15px;
+}
+
+/* common form for all page ___________________________ END */
+
+
+/* Billing form */
+
+.billForm {
+  margin: 5vh 0;
+  position: relative;
+  padding: 10px;
+  width: auto;
+  display: block;
+  border-radius: 1px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  border:3px dotted rgb(238, 136, 89);
+  background-color: #fff;
+  max-width: 95%;
+}
+
+.billForm::after {
+  clear: both;
+}
+
+.billForm h1 {
+  width: auto;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium',  Arial, sans-serif;
+  text-transform: capitalize;
+  margin: 5px;
+  line-height: 7px;
+  color: rgb(77, 76, 76);
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 2px  #7270ff;
+}
+
+.billForm .date{
+  text-align: right;
+  border-bottom: 1px dotted red;
+}
+.billForm .date input{
+  padding: 3px;
+  border:none ;
+  max-width: 90px;
+  font-size: 14px;
+}
+.billWrapper form {
+  padding: 5px;
+}
+
+.billWrapper form .inputWrapper {
+  margin: 2px 5px;
+  display: inline-block;
+}
+
+.billWrapper form .blngPrs-Wrapper
+{
+  margin: 5px 10px;
+  display: block;
+  color: #646464;
+  text-shadow: 0px 0px 1px rgb(241, 241, 241), 1px 1px 2px rgb(255, 255, 255);
+  border-radius: 2px;
+  padding: 2px 10px;
+  background: linear-gradient(to right, rgb(255, 222, 185), #fff);
+}
+.billWrapper form .blngPrs-Wrapper #vat
+{
+  padding: 3px 5px;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2.5px dotted rgb(43, 43, 43);
+  background: none;
+}
+
+.billWrapper label{
+  font-size: 15px;
+}
+.billWrapper input{
+  font-size: 15px;
+}
+.billWrapper select{
+  font-size: 15px;
+}
+.billWrapper .blngPrs-Wrapper .input{
+  padding: 0px 5px;
+  margin: 0px 3px;
+  font-weight: bold;
+}
+.billWrapper .blngPrs-Wrapper label{
+  padding: 0px 5px;
+  margin: 2px 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.billWrapper form .noVisible {
+  display: none;
+}
+
+.billWrapper form  .input1 {
+  padding: 5px;
+  box-shadow: 0px 0.8px 3px rgb(247, 216, 114);
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+.billWrapper form .input1 label{
+  padding: 0px 5px;
+}
+
+.billWrapper form  .inputHr {
+  padding: 0px 5px;
+  border-radius: 3px;
+  margin:0px 10px;
+  float: left;
+  box-shadow: 0px 0px 2px #bdbdc9;
+}
+
+.billWrapper form .inputWrapper .input i {
+  font-size: 13px;
+  color: #6562f3;
+  font-weight: bold;
+}
+
+.billWrapper form .inputHr label {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: rgb(63, 63, 63);
+  padding: 3px;
+}
+
+.billWrapper form .inputHr input {
+  padding: 3px 5px;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2.5px dotted rgb(74, 75, 80);
+  background: none;
+  /* border-bottom: 1px solid rgb(155, 152, 152); */
+}
+
+
+.billWrapper form .inputHr select {
+  padding: 1px 3px;  
+  /* border-bottom: 1px solid rgb(155, 152, 152); */
+}
+
+.billWrapper form .inputWrapper .input #fileInput {
+  padding-left: 0px;
+  background: none;
+  border: none;
+}
+
+.billWrapper form .radioWrapper {
+  margin: 10px 5px;
+  font-size: 15px;
+}
+.billWrapper form .radioWrapper .input {
+  display: flex;
+  flex-direction: row;
+}
+.billWrapper form .radioWrapper .input input {
+  margin: 5px 15px;
+}
+
+
+/* HOME PAGE  ______________________________ START */
+body .col-md-10 .total_user,
+body .col-md-10 .total_movie,
+body .col-md-10 .total_booking {
+  box-shadow: 1px 2px 3px #000;
+  margin: 10px;
+  padding: 20px 10px;
+  width: fit-content;
+  display: inline-block;
+}
+
+body .col-md-10 .total_user i,
+body .col-md-10 .total_movie i,
+body .col-md-10 .total_booking i {
+  font-size: 70px;
+  text-align: center;
+  display: block;
+  color: rgb(255, 255, 255);
+}
+
+body .col-md-10 .total_user h4,
+body .col-md-10 .total_movie h4,
+body .col-md-10 .total_booking h4 {
+  text-transform: capitalize;
+  margin: 10px auto auto auto;
+  color: #202020;
+  font-size: 20px;
+}
+body .col-md-10 .total_user h4 span,
+body .col-md-10 .total_movie h4 span,
+body .col-md-10 .total_booking h4 span {
+  text-shadow: 1px 2px 1px #1f1f1f;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+body .col-md-10 .total_user {
+  background-color: #41c1ca;
+}
+body .col-md-10 .total_movie {
+  background-color: #dacc56;
+}
+body .col-md-10 .total_booking {
+  background-color: #5cd34d;
+}
+
+/* HOME PAGE  ______________________________ END */
+
+/* Table  ______________________________ START */
+.row table th {
+  text-transform: capitalize;
+  border: 1px solid rgb(170, 165, 165);
+  font-size: 14px;
+  padding: 5px 7px;
+}
+.row .col-md-10 {
+  padding: 5px 20px;
+  overflow-x: auto;
+}
+
+.row .tableWrapper table {
+  margin-right: 10px;
+  widows: 90%;
+}
+.row .table td {
+  border: 1px solid rgb(170, 165, 165);
+  font-size: 14px;
+  padding: 5px 5px;
+}
+.row .table td img {
+  border: 1px solid #360b0b;
+  height: 60px;
+  max-width: 90px;
+  width: auto;
+}
+
+/* buttoms aboove table */
+
+.row .buttoms {
+  padding: 10px;
+  text-align: right;
+  display: inline-flex;
+  width: 100%;
+}
+.row .buttoms a {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #000;
+  padding: 5px;
+}
+
+.row .buttoms a i {
+  margin: 5px;
+}
+.row .buttoms a:first-child {
+  border-right: 2px solid;
+}
+.row .buttoms a:first-child i {
+  color: green;
+}
+
+.row .buttoms a {
+  text-decoration: none;
+  font-size: 16px;
+}
+/* //form inside  */
+.row .buttoms form{
+  display: block;
+  float: right;
+  margin: auto 10px auto auto;
+}
+
+.row button.addData, .row .buttoms form button, .row .buttoms form select{
+  border: none;
+  padding: 2px 6px;
+  margin: 0px 2px;
+  color: #fff;
+  transition: background-color 0.5s;
+  font-size: 14px;
+}
+.row .buttoms form button, .row .buttoms form select{
+  background-color: rgb(66, 66, 66);
+  border-radius: 1px;
+}
+.row .buttoms form select{
+  background-color: rgb(212, 166, 105);
+  border-radius: 1px;
+}
+
+.row button.addData {
+  background-color: rgb(101, 105, 101);
+  display: block;
+  width: fit-content;
+}
+
+.row button.addData i {
+  padding: 5px;
+}
+
+.row button.addData:hover {
+  background-color: rgb(29, 56, 37);
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(43, 42, 42);
+  color: purple;
+  text-align: center;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* TABLE PAGE  ______________________________ END */
+/* Bill PAGE  ______________________________ START */
+section.bill{
+  padding:10px;
+  border: 2px double rgb(255, 81, 0);
+  display: block;
+  border-radius: 1px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  border-width: 3px;
+  background-color: rgb(253, 207, 160);
+  max-width: 95%;
+  border-top-left-radius: 120px;
+  border-bottom-right-radius: 80px;
+}
+section.bill#vat{
+  background-color: rgb(215, 198, 224);
+}
+section.bill h2{
+  font-size: 30px;
+  text-align: center;
+  color: rgb(31, 30, 30);
+}
+section.bill h3{
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+section.bill h4{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 20px;
+  color:#000;
+}
+
+/* Date */
+section.bill .date{
+  text-align: right;
+}
+section.bill .date label:first-child{
+  color: red;
+  float: left;
+  margin-left:0px;
+  font-weight: bold;
+}
+
+section.bill .date input{
+  padding: 3px;
+  border:none ;
+  max-width: 90px;
+  font-size: 14px;
+  background: none;
+  color: rebeccapurple;
+}
+section.bill .date label{
+  color: rebeccapurple;
+  margin-left:20px;
+}
+section.bill .name {
+width: 100%;
+border-bottom: 2px solid rgb(116, 116, 116);
+margin: 2px 5px 20px auto;
+}
+section.bill .name label:not(:first-child){
+  margin-left:20px;
+}
+section.bill .name label{
+  color: rgb(50, 24, 75);
+  text-transform: capitalize;
+}
+section.bill .l_bill .input{
+  margin: 3px auto;
+}
+section.bill .l_bill .input input{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 2px dotted;
+  color: rgb(97, 44, 119);
+}
+
+.bill-list{
+  padding:3px 5px;
+  margin:3px 0px;
+}
+/* Bill PAGE  ______________________________ END */
+
+
+/* error message  print ______________ START*/
+.row i#ermsg {
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 1px 1px 2px #fe0202;
+  width: 100%;
+  border: 1px solid #fe0202;
+  border-radius: 2px;
+  display: block;
+  padding: 3px 5px;
+  background-color: #e6e0e0;
+  margin: 10px 3px;
+}
+
+.row i.errorMsg span {
+  background-color: #d42020;
+  padding: 6px 5px;
+  float: right;
+  font-size: 13px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: -5px;
+  color: #fff;
+}
+
+.row i.errorMsg span:hover {
+  background-color: #df0f0f;
+  margin-top: -3px;
+}
+
+/* error message  print ______________ END*/
